@@ -1,0 +1,36 @@
+{
+  "name": "subz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot",  
+    "build": "webpack --mode production"  
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giridhar1998/SubZ.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giridhar1998/SubZ/issues"
+  },
+  "homepage": "https://github.com/giridhar1998/SubZ#readme",
+  "dependencies": {
+    "create-react-app": "^5.0.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-webpack-plugin": "^0.1.2"
+  }
+}
