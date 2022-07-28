@@ -1,0 +1,28 @@
+{
+  "name": "subz",
+  "version": "1.0.0",
+  "description": "MERN E-Commerce Website for Selling Farm Products",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giridhar1998/SubZ.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giridhar1998/SubZ/issues"
+  },
+  "homepage": "https://github.com/giridhar1998/SubZ#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
