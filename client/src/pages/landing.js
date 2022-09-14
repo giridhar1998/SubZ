@@ -12,19 +12,16 @@ const Landing = () => {
         {/* info */}
         <div className='info'>
           <h1>
-            Vegetable <span>Selling</span> app
+            Fresh <span>Farm</span> Products
           </h1>
           <p>
-            I'm baby wayfarers hoodie next level taiyaki brooklyn cliche blue
-            bottle single-origin coffee chia. Aesthetic post-ironic venmo,
-            quinoa lo-fi tote bag adaptogen everyday carry meggings +1 brunch
-            narwhal.
+            We Sell Fresh Farm Products Collected Directly From Farmers and Deliver Them To Your Doorstep.
           </p>
           <Link to='/register' className='btn btn-hero'>
             Login/Register
           </Link>
         </div>
-        <img src={main} alt='job hunt' className='img main-img' />
+        <img src={main} alt='Farm Items' className='img main-img' />
       </div>
     </Wrapper>
   )

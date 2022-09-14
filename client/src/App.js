@@ -4,6 +4,11 @@ import { Register, Landing, Error, ProtectedRoute } from './pages'
 function App() {
   return (
     <BrowserRouter>
+      <nav>
+        <Link to='/'>Dashboard</Link>
+        <Link to='/register'>Register</Link>
+        <Link to='/landing'>Home</Link>
+      </nav>
       <Routes>
         <Route path="/" element={<div>Dashboard</div>} />
         <Route path='/register' element={<Register />} />
@@ -13,11 +18,5 @@ function App() {
     </BrowserRouter>
   )
 }
-
-<nav>
-  <Link to='/'>Dashboard</Link>
-  <Link to='/register'>Register</Link>
-  <Link to='/landing'>Home</Link>
-</nav>
 
 export default App;
