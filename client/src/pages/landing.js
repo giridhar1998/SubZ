@@ -1,30 +1,33 @@
-import React from 'react'
-import logo from '../assets/images/logo.svg'
 import main from '../assets/images/main.svg'
-
-const landing = () => {
+import Wrapper from '../assets/wrappers/LandingPage'
+import { Logo } from '../components'
+import { Link } from 'react-router-dom'
+const Landing = () => {
   return (
-    <main> 
+    <Wrapper>
       <nav>
-         <img src={logo} alt="SubZ" className ="logo" />
+        <Logo />
       </nav>
-      <div className="container page">
-       {/* info */}
-       <div className="info">
-         <hi>
-            Farm <span>Products</span><span>Selling</span>App
-         </hi>
-         <p>
-          I'm baby pour-over helvetica migas portland af, yuccie woke. Synth cred la croix chicharrones austin pickled brooklyn jean shorts truffaut viral cloud bread whatever bicycle rights keffiyeh. Banjo unicorn keffiyeh roof party street art scenester. Succulents cred tumeric intelligentsia hashtag, salvia tofu portland. Artisan fashion axe poutine sartorial.
-         </p>
-         <button className="btn btn-hero"> 
-           Login/Register
-         </button>
-       </div>
-       <img src={main} alt="Vegetables" className="img main-img" /> 
+      <div className='container page'>
+        {/* info */}
+        <div className='info'>
+          <h1>
+            job <span>tracking</span> app
+          </h1>
+          <p>
+            I'm baby wayfarers hoodie next level taiyaki brooklyn cliche blue
+            bottle single-origin coffee chia. Aesthetic post-ironic venmo,
+            quinoa lo-fi tote bag adaptogen everyday carry meggings +1 brunch
+            narwhal.
+          </p>
+          <Link to='/register' className='btn btn-hero'>
+            Login/Register
+          </Link>
+        </div>
+        <img src={main} alt='job hunt' className='img main-img' />
       </div>
-    </main>
+    </Wrapper>
   )
 }
 
-export default landing
+export default Landing
