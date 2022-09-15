@@ -1,4 +1,4 @@
-import { useAppContext } from '../context/appContext'
+import { useAppContext } from '../contexts/appContext'
 import { Navigate } from 'react-router-dom'
 
 const ProtectedRoute = ({ children }) => {
