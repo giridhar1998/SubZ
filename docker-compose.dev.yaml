@@ -1,0 +1,51 @@
+version: '3'
+services: 
+    mongoDb:
+        image: mongo
+        restart: always
+        environment:
+          - MONGO_INITDB_ROOT_USERNAME=SubZ
+          - MONGO_INITDB_ROOT_PASSWORD=SubZ
+        
+        volumes: 
+            - db-volume:/data/db  
+
+    backend:   
+        build:
+            context: ./backend
+            dockerfile: Dockerfile.dev
+        volumes: 
+            - /app/node_modules
+            - ./backend:/app    
+        environment: 
+            - MONGODB_URI=mongodb://SubZ:SubZ@mongoDb:27017/dockerizingMernApplicationTestDB?authSource=admin
+            - CHOKIDAR_USEPOLLING=true
+            - NODE_ENV=development
+        depends_on: 
+            - mongoDb   
+        restart: always    
+
+    frontend:   
+        stdin_open: true 
+        tty: true   
+        build:
+            context: ./frontend
+            dockerfile: Dockerfile.dev
+        volumes: 
+            - /app/node_modules
+            - ./frontend:/app    
+        #request will forward to same url, so we only need /api to distinguish that this request will forward to our backend           
+        environment: 
+            - REACT_APP_BACKEND_URL=/api
+            - CHOKIDAR_USEPOLLING=true
+    
+    nginx:
+        build:
+            context: ./nginx
+            dockerfile: Dockerfile.dev
+        ports: 
+            - 3000:80
+        restart: always
+
+volumes: 
+    db-volume:
